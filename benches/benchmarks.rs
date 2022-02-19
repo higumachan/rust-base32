@@ -2,7 +2,7 @@ use criterion::{
     black_box, criterion_group, criterion_main, Bencher, BenchmarkId, Criterion, Throughput,
 };
 use rand::{Rng, SeedableRng};
-use rust_base32::{Engine, NaiveEngine};
+use base32::engine::{Engine, NaiveEngine};
 
 fn do_naive_encode_bench(b: &mut Bencher, &size: &usize) {
     let mut v: Vec<u8> = Vec::with_capacity(size);
